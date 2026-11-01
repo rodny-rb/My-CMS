@@ -238,6 +238,9 @@ $bannerText  = $banner ? pick($banner, ['message', 'description', 'content', 'ba
     </section>
 
     <section class="contact-section" id="contact">
+    <?php if (isset($_GET['sent']) && $_GET['sent'] === '1'): ?>
+    <div class="section-wrap notice">Thanks — your message was sent successfully.</div>
+<?php endif; ?>
         <div class="section-wrap contact-inner">
             <div>
                 <p class="eyebrow">04 / CONTACT</p>
